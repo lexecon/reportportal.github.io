@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "lts/*"
+
+before_install:
+  - chmod +x publi.sh
   
 script:
   - "npm run eslint"
