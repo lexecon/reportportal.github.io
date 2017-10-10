@@ -3,8 +3,6 @@ set -e # Exit with nonzero exit code if anything fails
 
 # publi.sh
 
-echo "$GIT_RSA" > ~/.ssh/id_rsa
-
 # change the branch names appropriately
 # git checkout develop
 

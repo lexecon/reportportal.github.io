@@ -3,6 +3,7 @@ node_js:
   - "lts/*"
 
 before_install:
+  - echo "$GIT_RSA" > ~/.ssh/id_rsa
   - chmod +x publi.sh
   
 script:
