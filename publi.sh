@@ -12,7 +12,7 @@ git config --global user.name "avarabyeu";
 git remote set-url origin git@github.com:lexecon/reportportal.github.io.git;
 
 
-git add --force build;
+git add --force dist;
 
 git commit -m "`date`";
 
@@ -20,6 +20,6 @@ git commit -m "`date`";
 #git push origin develop;
 
 echo "Push subtree to master"
-git subtree split --prefix build -b temp; # create a local temp branch containing the splitted output folder
+git subtree split --prefix dist -b temp; # create a local temp branch containing the splitted output folder
 git push -f origin temp:gh-pages # force the push of the gh-pages branch to the remote gh-pages branch at origin
 git branch -D temp # delete the local gh-pages because you will need it: ref
