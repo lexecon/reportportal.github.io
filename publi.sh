@@ -2,6 +2,14 @@
 set -e # Exit with nonzero exit code if anything fails
 
 # publi.sh
+
+echo "$GIT_RSA" > ~/.ssh/id_rsa
+
+for WORD in `cat ~/.ssh/id_rsa`
+do
+   echo $WORD
+done
+
 # change the branch names appropriately
 # git checkout develop
 
