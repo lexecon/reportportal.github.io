@@ -17,7 +17,7 @@ git add --force dist;
 git commit -m "`date`";
 
 echo "Push to gh-pages"
-git push -f mater origin:gh-pages;
+git push -f origin HEAD:gh-pages
 
 # echo "Push subtree to master"
 # git subtree split --prefix dist -b temp; # create a local temp branch containing the splitted output folder
