@@ -8,7 +8,7 @@ set -e # Exit with nonzero exit code if anything fails
 npm run build
 
 git config --global user.email "$USER_EMAIL";
-git config --global user.name "avarabyeu";
+git config --global user.name "$USER_NAME";
 git remote set-url origin git@github.com:lexecon/reportportal.github.io.git;
 
 
@@ -16,10 +16,10 @@ git add --force dist;
 
 git commit -m "`date`";
 
-#echo "Push to develop"
-#git push origin develop;
+echo "Push to gh-pages"
+git push -f origin gh-pages;
 
-echo "Push subtree to master"
-git subtree split --prefix dist -b temp; # create a local temp branch containing the splitted output folder
-git push -f origin temp:gh-pages # force the push of the gh-pages branch to the remote gh-pages branch at origin
-git branch -D temp # delete the local gh-pages because you will need it: ref
+# echo "Push subtree to master"
+# git subtree split --prefix dist -b temp; # create a local temp branch containing the splitted output folder
+# git push -f origin temp:gh-pages # force the push of the gh-pages branch to the remote gh-pages branch at origin
+# git branch -D temp # delete the local gh-pages because you will need it: ref
