@@ -16,7 +16,7 @@ git add --force dist;
 
 git commit -m "`date`";
 
-echo "Push to gh-pages"
+echo "$USER_EMAIL"
 git push -f origin HEAD:gh-pages
 
 # echo "Push subtree to master"
