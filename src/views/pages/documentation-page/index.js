@@ -26,6 +26,7 @@ export default Epoxy.View.extend({
     this.footer = new Footer();
     $('[data-js-footer-container]', this.$el).html(this.footer.$el);
   },
+
   changeAnchor(id) {
     docApi.renderSection(id);
   },
